@@ -1,0 +1,26 @@
+/* styles.css */
+body {
+  margin: 0;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
+/* Fading animation */
+.fade {
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
+}
