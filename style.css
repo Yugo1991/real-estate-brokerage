@@ -1,26 +1,40 @@
 /* styles.css */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
 
-.slideshow-container {
-  position: relative;
-  max-width: 1000px;
-  margin: auto;
+.navbar{
+  background-color: darkblue;
+  padding: 1rem;
 }
 
-img {
-  vertical-align: middle;
-  width: 100%;
-  height: auto;
+.nav-links{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
-/* Fading animation */
-.fade {
-  animation: fadeEffect 1s ease-in-out;
+.nav-links li a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-@keyframes fadeEffect {
-  from { opacity: 0.4 }
-  to { opacity: 1 }
+.nav-links li a:hover {
+  color: white; 
 }
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
