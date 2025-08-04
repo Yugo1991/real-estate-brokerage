@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<link>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sapphire Group</title>
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sapphire Group</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section id="nav">
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="listings.html">Listings</a></li>                                              
-                <li><a href="agents.html">Agents</a></li>
-                <li><a href="contact.html">Contact</a></li>                                                                           
-            </ul>
-        </nav>
-        <nav class="navbar">
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="menu-links">
-            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-            <li><a href="about.html" onclick="toggleMenu()">About</a></li>
-            <li><a href="listings.html" onclick="toggleMenu()">Listings</a></li>
-            <li><a href="agents.html" onclick="toggleMenu()">Agents</a></li>
-            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
-        </div>
-        </div>
-        </nav>
-    </section>
-
-    <h1>The Sapphire Group</h1>
-
-    <section id="slideshow">
-        <div class="slideshow-container">
-        <div class="mySlides fade">
-        <img src="img/house1.png" style="width:100%">
-        </div>
-
-        <div class="mySlides fade">
-        <img src="img/house2.png" style="width:100%">
+  <header>
+    <nav class="top-nav">
+      <div class="logo">The Sapphire Group</div>
+      <ul class="nav-links">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">LISTINGS</a></li>
+        <li><a href="#">AGENTS</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+    <div class="side-menu" id="sideMenu">
+      <a href="#">HOME</a>
+      <a href="#">LISTINGS</a>
+      <a href="#">AGENTS</a>
+      <a href="#">CONTACT</a>
     </div>
+  </header>
 
-    <div class="mySlides fade">
-    <img src="img/house3.png" style="width:100%">
+  <section class="hero">
+    <h1>"Find Your Dream Home Today"</h1>
+    <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="House">
+    <div class="listing-toggle">
+      <span class="active">For Sale</span>
+      <span>For Rent</span>
     </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search By">
+      <input type="text" placeholder="Enter City, Zip, Neighborhood, Address">
+      <button>Search</button>
     </div>
-    </section>
+  </section>
 
-<script src="script.js"></script>
+  <footer>
+    <div class="contact-info">
+      Inner Harbor Complex, Suite 300<br>
+      Baltimore, MD 21285<br>
+      +1-234-567-8910<br>
+      sapphiregroup@email.com
+    </div>
+    <div class="socials">
+      <a href="#">📘</a>
+      <a href="#">🐦</a>
+      <a href="#">💼</a>
+    </div>
+    <button class="back-to-top" onclick="scrollToTop()">Back To Top</button>
+  </footer>
 </body>
 </html>
