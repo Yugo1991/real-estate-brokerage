@@ -31,11 +31,19 @@ header {
   display: flex;
   list-style: none;
   gap: 2rem;
+  justify-content: center;
+  flex: 2;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
+}
+
+.nav-container{
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .hamburger {
@@ -56,10 +64,23 @@ header {
   flex-direction: column;
   gap: 1rem;
   transition: right 0.3s ease-in-out;
+  z-index: 9999;
 }
 
 .side-menu.show {
   right: 0;
+}
+
+.close-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.close-btn:hover {
+  color: rgb(26, 22, 107);
 }
 
 /* Hero Section */

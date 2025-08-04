@@ -12,21 +12,24 @@
 <body>
   <header>
     <nav class="top-nav">
-      <div class="logo">The Sapphire Group</div>
+      <div class="logo"><img src="./img/logoblue.png" height="60" width="60"></div>
+      <div class="nav-container">
       <ul class="nav-links">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">LISTINGS</a></li>
-        <li><a href="#">AGENTS</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="listings.html">LISTINGS</a></li>
+        <li><a href="agents.html">AGENTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
+      </div>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
     <div class="side-menu" id="sideMenu">
-      <a href="#">HOME</a>
-      <a href="#">LISTINGS</a>
-      <a href="#">AGENTS</a>
-      <a href="#">CONTACT</a>
-    </div>
+  <div class="close-btn" onclick="toggleMenu()">✕</div>
+  <a href="index.html">HOME</a>
+  <a href="listings.html">LISTINGS</a>
+  <a href="agents.html">AGENTS</a>
+  <a href="contact.html">CONTACT</a>
+</div>
   </header>
 
   <section class="hero">

@@ -1,8 +1,7 @@
 function toggleMenu() {
   const menu = document.getElementById('sideMenu');
-  menu.classList.toggle('show');
-}
+  const hamburger = document.querySelector('.hamburger');
 
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  menu.classList.toggle('show');
+  hamburger.style.display = menu.classList.contains('show') ? 'none' : 'block';
 }
