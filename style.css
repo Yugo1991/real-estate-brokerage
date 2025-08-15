@@ -38,6 +38,7 @@ header {
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .nav-container{
@@ -46,10 +47,50 @@ header {
   justify-content: center;
 }
 
+.nav ul{
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a{
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav a::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 8px;
+  height: 8px;
+  background-color: currentColor;
+  transform: translateX(-50%) rotate(45deg) scale(0);
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after{
+  transform: translateX(-50%) rotate(45deg) scale(1);
+}
+
+nav a.active::after{
+  transform: translateX(-50%) rotate(45deg) scale(1) !important;
+}
+
 .hamburger {
-  display: none;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  background: rgb(26, 22, 107);
+  color: white;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .side-menu {
@@ -65,6 +106,11 @@ header {
   gap: 1rem;
   transition: right 0.3s ease-in-out;
   z-index: 9999;
+}
+
+.side-menu a{
+  text-decoration: none;
+  color: black;
 }
 
 .side-menu.show {
@@ -83,11 +129,57 @@ header {
   color: rgb(26, 22, 107);
 }
 
+.side-menu.show a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+/* diamond hover effect */
+.side-menu.show a::after {
+  content: "";
+  position: absolute;
+  left: 28%;
+  bottom: -10px;
+  width: 8px;
+  height: 8px;
+  background: currentColor;
+  transform: translateX(-50%) rotate(45deg) scale(0.6);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.side-menu.show a:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) rotate(45deg) scale(1);
+  color: black;
+}
+
+
 /* Hero Section */
 .hero {
+  position: relative;
   text-align: center;
   padding: 2rem;
 }
+
+.hero-slides{
+  position: relative;
+}
+
+.hero-slides .slide{
+  position: relative;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.hero-slides .slide.active {
+  opacity: 1;
+}
+
 
 .hero h1 {
   font-size: 2rem;
