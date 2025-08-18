@@ -161,67 +161,116 @@ nav a.active::after{
 /* Hero Section */
 .hero {
   position: relative;
-  text-align: center;
-  padding: 2rem;
+  height: 75vh;
+  overflow: hidden;
 }
 
-.hero-slides{
+.hero-slides {
   position: relative;
+  height: 100%;
 }
 
-.hero-slides .slide{
-  position: relative;
+.hero-slides .slide {
+  position: absolute;   /* stack on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
+  opacity: 0;           /* hidden by default */
+  transition: opacity 2s ease-in-out; /* smooth fade */
 }
 
 .hero-slides .slide.active {
-  opacity: 1;
+  opacity: 0.5;           /* only active one is visible */
 }
-
 
 .hero h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  z-index: 2;
+  padding: 0 10px;
+  text-align: center;
+  white-space: nowrap;
 }
 
+
 .hero img {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 1rem;
-}
+  }
 
-.listing-toggle {
-  margin-top: 1rem;
+/* Toggle styling */
+
+.listing-search {
+  margin-bottom: 3rem; /* adds space below the whole section */
+} 
+
+.listing-search .listing-toggle {
+  margin: 1rem 0;
+  text-align: center;
   font-size: 1.2rem;
 }
 
-.listing-toggle span {
-  margin: 0 1rem;
+.listing-search .listing-toggle span {
+  margin: 0 1.5rem;
   cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
-.listing-toggle .active {
-  border-bottom: 2px solid black;
+.listing-search .listing-toggle .active {
+  border-bottom: 3px solid #0077cc; /* brokerage blue */
+  color: #0077cc;
+  font-weight: bold;
 }
 
-.search-bar {
-  margin-top: 1rem;
+/* Search bar styling */
+.listing-search .search-bar {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* ✅ prevents overflow on small screens */
 }
 
 .search-bar input {
-  padding: 0.5rem;
-  width: 200px;
+  padding: 0.75rem 1rem;
+  width: 250px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #0077cc;
 }
 
 .search-bar button {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
+
+.search-bar button:hover {
+  background-color: #005fa3;
+}
+
 
 /* Footer */
 footer {
@@ -240,9 +289,10 @@ footer {
 
 .socials a {
   margin: 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: white;
   text-decoration: none;
+  position: center;
 }
 
 .back-to-top {

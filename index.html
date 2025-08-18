@@ -8,6 +8,8 @@
   <script defer src="script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
   <header>
@@ -33,20 +35,28 @@
   </header>
 
   <section class="hero">
-    <h1>"Find Your Dream Home Today"</h1>
-    <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="House1">
-    <img src="img/house2.png" alt="House2">
-    <img src="img/house3.png" alt="House3">
-    <div class="listing-toggle">
-      <span class="active">For Sale</span>
-      <span>For Rent</span>
-    </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search By">
-      <input type="text" placeholder="Enter City, Zip, Neighborhood, Address">
-      <button>Search</button>
-    </div>
+      <div class="hero-slides">
+    <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" class="slide active" alt="House1">
+    <img src="img/house2.png" class="slide" alt="House2">
+    <img src="img/house3.png" class="slide" alt="House3">
+        </div>
+
+        <h1 class="hero-title">"Find Your Dream Home Today"</h1>
   </section>
+
+  <section class="listing-search">
+  <div class="listing-toggle">
+    <span class="active">For Sale</span>
+    <span>For Rent</span>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search by">
+    <input type="text" placeholder="City, Zip, Neighborhood, Address">
+    <button>Search</button>
+  </div>
+</section>
+
 
   <footer>
     <div class="contact-info">
@@ -55,10 +65,12 @@
       +1-234-567-8910<br>
       sapphiregroup@email.com
     </div>
+    
     <div class="socials">
-      <a href="#">📘</a>
-      <a href="#">🐦</a>
-      <a href="#">💼</a>
+      <a href="#"><i class='fab fa-facebook-f'></i></a>
+      <a href="#"><i class='fab fa-twitter'></i></a>
+      <a href="#"><i class='fab fa-instagram'></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
     </div>
     <button class="back-to-top" onclick="scrollToTop()">Back To Top</button>
   </footer>
