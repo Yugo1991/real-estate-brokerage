@@ -365,6 +365,34 @@ footer {
   line-height: 1.4;
 }
 
+/* Agents Page */
+.agents-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.agent-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: white;
+}
+.agent-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.agent-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+
 
 /* Responsive */
 @media (max-width: 768px) {

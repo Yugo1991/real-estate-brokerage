@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sapphire Group</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <nav class="top-nav">
+      <div class="logo">
+        <a href="index.html">
+        <img src="./img/logoblue.png" height="60" width="60">
+        </a>
+      </div>
+      <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <a href="about.html">ABOUT</a>
+        <li><a href="listings.html">LISTINGS</a></li>
+        <li><a href="agents.html">AGENTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+    <div class="side-menu" id="sideMenu">
+  <div class="close-btn" onclick="toggleMenu()">✕</div>
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="listings.html">LISTINGS</a>
+  <a href="agents.html">AGENTS</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+  </header>
+
+<section class="agents-page">
+    <div class="agents-grid">
+      <div class="agent-card">
+        <img src="img/headshot5.png" alt="Agent 5">
+        <p>Agent: Christina Kim<br>
+        REL#: 123-456-5555<br>
+        E-Mail: ckim@sapphiregroup.com</p>
+      </div>
+      
+      <div class="agent-card">
+        <img src="img/headshot7.png" alt="Agent 7">
+        <p>Agent: Brock Hanson<br>
+        REL#: 123-456-5555<br>
+        E-Mail: bhanson@sapphiregroup.com</p>
+      </div>
+
+      <div class="agent-card">
+        <img src="img/headshot3.png" alt="Agent 3">
+        <p>Agent: Kevin Laster<br>
+        REL#: 123-456-5555<br>
+        E-Mail: klaster@sapphiregroup.com</p>
+      </div>
+      
+      <div class="agent-card">
+        <img src="img/headshot4.png" alt="Agent 4">
+        <p>Agent: Kennedy Andrews<br>
+        REL#: 123-456-5555<br>
+        E-Mail: kandrews@sapphiregroup.com</p>
+      </div>
+
+      <div class="agent-card">
+        <img src="img/headshot9.png" alt="Agent 9">
+        <p>Agent: Megan White<br>
+        REL#: 123-456-5555<br>
+        E-Mail: mwhite@sapphiregroup.com</p>
+      </div>
+
+      <div class="agent-card">
+        <img src="img/headshot12.png" alt="Agent 12">
+        <p>Agent: Zoey Williams<br>
+        REL#: 123-456-5555<br>
+        E-Mail: zwilliams@sapphiregroup.com</p>
+      </div>
+
+     
+      <!-- Repeat cards for more homes -->
+    </div>
+</section>
+
+
+
+  <footer>
+    <div class="contact-info">
+      Inner Harbor Complex, Suite 300<br>
+      Baltimore, MD 21285<br>
+      +1-234-567-8910<br>
+      sapphiregroup@email.com
+    </div>
+    
+    <div class="socials">
+      <a href="#"><i class='fab fa-facebook-f'></i></a>
+      <a href="#"><i class='fab fa-twitter'></i></a>
+      <a href="#"><i class='fab fa-instagram'></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    <button class="back-to-top" onclick="scrollToTop()">Back To Top</button>
+  </footer>
+
+</body>
+</html>
