@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sapphire Group</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <nav class="top-nav">
+      <div class="logo">
+        <a href="index.html">
+        <img src="./img/logoblue.png" height="60" width="60">
+        </a>
+      </div>
+      <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <a href="about.html">ABOUT</a>
+        <li><a href="listings.html">LISTINGS</a></li>
+        <li><a href="agents.html">AGENTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+    <div class="side-menu" id="sideMenu">
+  <div class="close-btn" onclick="toggleMenu()">✕</div>
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="listings.html">LISTINGS</a>
+  <a href="agents.html">AGENTS</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+  </header>
+
+<section class="contact">
+    <h1>CONTACT</h1>
+    <form action="#" method="post" class="contact-form">
+      <div class="form-row">
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <input type="text" name="lastName" placeholder="Last Name" required>
+      </div>
+      <div class="form-row">
+        <input type="email" name="email" placeholder="E-Mail" required>
+        <input type="tel" name="phone" placeholder="Phone Number +1 (410) 555-1234" required>
+      </div>
+      <textarea name="message" rows="6" placeholder="How can our brokerage assist you?" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+
+
+  <footer>
+    <div class="contact-info">
+      Inner Harbor Complex, Suite 300<br>
+      Baltimore, MD 21285<br>
+      +1-234-567-8910<br>
+      sapphiregroup@email.com
+    </div>
+    
+    <div class="socials">
+      <a href="#"><i class='fab fa-facebook-f'></i></a>
+      <a href="#"><i class='fab fa-twitter'></i></a>
+      <a href="#"><i class='fab fa-instagram'></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    <button class="back-to-top" onclick="scrollToTop()">Back To Top</button>
+  </footer>
+
+</body>
+</html>
